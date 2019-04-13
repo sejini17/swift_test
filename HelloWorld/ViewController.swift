@@ -7,14 +7,45 @@
 //
 
 import UIKit
+import WebKit
 
 class ViewController: UIViewController {
     @IBOutlet var lblInput: UILabel!
     @IBOutlet var txtInput: UITextField!
     
+    @IBOutlet var webMain: WKWebView!
+    @IBOutlet var aiWeb: UIActivityIndicatorView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        print("콘솔에 메세지 표시2222")
+        
+        webMain.load(
+            URLRequest(
+                url: URL(string:"http://daum.net")!
+            )
+        )
+        
+        webMain.addObserver(self, forKeyPath: #keyPath(WKWebView.isLoading), options: .new, context: nil)
+        
+        
+        var str = "HelloWorld"
+        print(str)
+        
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "loading"{
+            if webMain.isLoading {
+                aiWeb.startAnimating()
+            }
+            else {
+                aiWeb.stopAnimating()
+            }
+            aiWeb.isHidden = !webMain.isLoading
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,6 +55,19 @@ class ViewController: UIViewController {
 
     @IBAction func btnInput(_ sender: Any) {
         lblInput.text = "efjkafjelkj" + txtInput.text!
+        
+        let alertTest = UIAlertController(
+            title: "test title",
+            message: lblInput.text,
+            preferredStyle: UIAlertControllerStyle.alert
+            )
+        alertTest.addAction(UIAlertAction(
+                title: "OK",
+                style: UIAlertActionStyle.default,
+                handler: nil
+            ))
+        
+        present(alertTest, animated: true, completion: nil)
     }
     
 }

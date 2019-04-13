@@ -12,6 +12,9 @@
 		A9A78E9522617ADE00BC5B1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9A78E9322617ADE00BC5B1B /* Main.storyboard */; };
 		A9A78E9722617AE000BC5B1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9A78E9622617AE000BC5B1B /* Assets.xcassets */; };
 		A9A78E9A22617AE000BC5B1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9A78E9822617AE000BC5B1B /* LaunchScreen.storyboard */; };
+		A9A78EC02261ACFA00BC5B1B /* logo_todo.png in Resources */ = {isa = PBXBuildFile; fileRef = A9A78EBF2261ACF900BC5B1B /* logo_todo.png */; };
+		A9A78EC22261AE8B00BC5B1B /* Intro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9A78EC12261AE8B00BC5B1B /* Intro.storyboard */; };
+		A9A78EC52261CC6900BC5B1B /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A78EC42261CC6900BC5B1B /* IntroViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		A9A78E9622617AE000BC5B1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9A78E9922617AE000BC5B1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9A78E9B22617AE000BC5B1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9A78EBF2261ACF900BC5B1B /* logo_todo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_todo.png; sourceTree = "<group>"; };
+		A9A78EC12261AE8B00BC5B1B /* Intro.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Intro.storyboard; sourceTree = "<group>"; };
+		A9A78EC42261CC6900BC5B1B /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,25 @@
 		A9A78E8E22617ADE00BC5B1B /* HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
+				A9A78EC32261B06600BC5B1B /* images */,
 				A9A78E8F22617ADE00BC5B1B /* AppDelegate.swift */,
 				A9A78E9122617ADE00BC5B1B /* ViewController.swift */,
 				A9A78E9322617ADE00BC5B1B /* Main.storyboard */,
 				A9A78E9622617AE000BC5B1B /* Assets.xcassets */,
 				A9A78E9822617AE000BC5B1B /* LaunchScreen.storyboard */,
 				A9A78E9B22617AE000BC5B1B /* Info.plist */,
+				A9A78EC12261AE8B00BC5B1B /* Intro.storyboard */,
+				A9A78EC42261CC6900BC5B1B /* IntroViewController.swift */,
 			);
 			path = HelloWorld;
+			sourceTree = "<group>";
+		};
+		A9A78EC32261B06600BC5B1B /* images */ = {
+			isa = PBXGroup;
+			children = (
+				A9A78EBF2261ACF900BC5B1B /* logo_todo.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +139,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9A78EC02261ACFA00BC5B1B /* logo_todo.png in Resources */,
 				A9A78E9A22617AE000BC5B1B /* LaunchScreen.storyboard in Resources */,
 				A9A78E9722617AE000BC5B1B /* Assets.xcassets in Resources */,
 				A9A78E9522617ADE00BC5B1B /* Main.storyboard in Resources */,
+				A9A78EC22261AE8B00BC5B1B /* Intro.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9A78EC52261CC6900BC5B1B /* IntroViewController.swift in Sources */,
 				A9A78E9222617ADE00BC5B1B /* ViewController.swift in Sources */,
 				A9A78E9022617ADE00BC5B1B /* AppDelegate.swift in Sources */,
 			);
@@ -281,6 +301,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GGWD6HU4JB;
 				INFOPLIST_FILE = HelloWorld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -298,6 +319,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GGWD6HU4JB;
 				INFOPLIST_FILE = HelloWorld/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
