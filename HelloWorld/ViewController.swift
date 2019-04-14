@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         webMain.addObserver(self, forKeyPath: #keyPath(WKWebView.isLoading), options: .new, context: nil)
         
         
-        var str = "HelloWorld"
+        let str = "HelloWorld"
         print(str)
         
     }
@@ -59,11 +59,11 @@ class ViewController: UIViewController {
         let alertTest = UIAlertController(
             title: "test title",
             message: lblInput.text,
-            preferredStyle: UIAlertControllerStyle.alert
+            preferredStyle: UIAlertController.Style.alert
             )
         alertTest.addAction(UIAlertAction(
                 title: "OK",
-                style: UIAlertActionStyle.default,
+                style: UIAlertAction.Style.default,
                 handler: nil
             ))
         
